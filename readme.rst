@@ -1,71 +1,72 @@
-###################
-What is CodeIgniter
-###################
+How to RUN this Program. (running on UBUNTU)
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+1.
+Download XAMPP (SKIP if you can access /opt/lampp/lampp
+-------------------------------------------------------------------------------------
+Download XAMPP:
+Visit the official Apache Friends website to download the latest version of XAMPP for Linux. You can do this through your web browser or via the terminal using wget command. For example:
 
-*******************
-Release Information
-*******************
+arduino
+Copy code
+wget https://www.apachefriends.org/xampp-files/{latest-version}.tar.gz
+Extract the Archive:
+Once the download is complete, navigate to the directory where the downloaded file is located and extract the archive using the following command:
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+bash
+Copy code
+tar xvfz xampp-linux-x64-{version}.tar.gz -C /opt
+This command will extract the contents of the XAMPP archive to the /opt directory.
 
-**************************
-Changelog and New Features
-**************************
+Run the Installer:
+After extraction, navigate to the /opt directory:
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+bash
+Copy code
+cd /opt/lampp
+Then, run the XAMPP installer script:
 
-*******************
-Server Requirements
-*******************
+bash
+Copy code
+sudo ./xampp start
+This command will start the XAMPP services. You may be prompted for your password.
 
-PHP version 5.6 or newer is recommended.
+Accessing XAMPP:
+Once XAMPP is running, you can access it via a web browser by typing localhost or 127.0.0.1 in the address bar. This will display the XAMPP dashboard where you can manage your server components.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+Additional Configurations:
 
-************
-Installation
-************
+If you want XAMPP to start automatically when your system boots up, you can create a symbolic link to the /opt/lampp/lampp script in the /etc/init.d directory and use the update-rc.d command to update the runlevel information for the XAMPP service.
+You may also need to adjust file permissions or configurations depending on your specific use case.
+That's it! You should now have XAMPP installed and running on your Ubuntu system.
+------------------------------------------------------------------------------------------------------
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
 
-*******
-License
-*******
+2. Git Pull 
+---------------------------------------------------------------------------------------------
+open terminal
+cd /opt/lampp/htdocs
+remove all file and folder in this folder, or you can move it
+then 
+git clone git@github.com:GiriWardana/ci3_crud.git
+---------------------------------------------------------------------------------------------
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
 
-*********
-Resources
-*********
+3. Import database 'bakrie.sql'
+---------------------------------------------------------------------------------------------
+open http://localhost/phpmyadmin/ (ensure you have run apache)
+import the bakrie.sql into your workbence
+---------------------------------------------------------------------------------------------
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+4. Open localhost
+---------------------------------------------------------------------------------------------
+open http://localhost
+enjoy this code
+---------------------------------------------------------------------------------------------
 
-***************
-Acknowledgement
-***************
 
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+
+
+
+
